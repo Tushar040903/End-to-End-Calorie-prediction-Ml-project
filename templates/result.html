@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Calorie Burn Prediction - Result</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- FontAwesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+      body {
+        background: linear-gradient(45deg, #89CFF0, #B0E0E6);
+        font-family: Arial, sans-serif;
+        color: #333;
+      }
+      .container {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        margin-top: 50px;
+        max-width: 600px;
+        text-align: center;
+      }
+      h1 {
+        color: #005f73;
+        margin-bottom: 20px;
+      }
+      h2 {
+        color: #00796b;
+        margin-top: 20px;
+      }
+      p {
+        color: #005f73;
+      }
+      .btn-primary {
+        background-color: #00bcd4;
+        border-color: #00bcd4;
+        font-weight: bold;
+      }
+      .btn-primary:hover {
+        background-color: #0097a7;
+        border-color: #0097a7;
+      }
+      .footer {
+        margin-top: 30px;
+        font-size: 0.9rem;
+        color: #555;
+      }
+      .social-icons a {
+        margin: 0 15px;
+        color: #005f73;
+        transition: color 0.3s ease;
+      }
+      .social-icons a:hover {
+        color: #00bcd4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Prediction Result</h1>
+      <h2>Calories Burnt: {{ results }}</h2>
+      <p class="mt-4">Thank you for using our Calorie Burn Prediction App. Stay healthy and keep burning!</p>
+      <a href="{{ url_for('predict_datapoint') }}" class="btn btn-primary">Predict Again</a>
+      <div class="footer mt-4">
+        <p>Developed by Tushar Bhardwaj, NIT Kurukshetra</p>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/tushar-bhardwaj-99780428a/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+          <a href="https://github.com/Tushar040903" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
